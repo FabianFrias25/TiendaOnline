@@ -13,6 +13,7 @@ class Producto(models.Model):
         ('cocina', 'Cocina'),
         ('fiambres', 'Fiambres'),
         ('mayoreo', 'Mayoreo'),
+        ('otros', 'Otros')
     ]
 
     codigo = models.IntegerField(unique=True)
@@ -27,6 +28,7 @@ class Producto(models.Model):
 
     class Meta:
         verbose_name_plural = "Productos"
+
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)

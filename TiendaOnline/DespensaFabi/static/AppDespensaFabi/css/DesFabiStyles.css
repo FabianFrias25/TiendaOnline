@@ -1,37 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;1,100;1,200&display=swap');
+
 .contenido{
     margin-top: 100px !important;
     padding: 20;
 }
 
-nav {
-    background-color: #91D17F;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    width: 100%;
-    padding: 5px 10%;
-}
-
-.nav-option {
-    font-family: "Calisto MT", sans-serif;
-    display: flex;
-    align-items: center;
-    list-style: none;
-    padding: 5px 5px 5px 10px;
-}
-
-.nav-option li {
-    display: inline-block;
-    padding: 0 20px;
-    position: relative;
-}
-
-.nav-option a {
-    font-size: 25px;
-    font-weight: 700;
-    color: #EAEAEA;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
     text-decoration: none;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+/* HEADER SUPERIOR */
+
+.header_superior{
+    max-width: 1200px
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #F6DBDB;
 }
 
 .logo{
@@ -39,39 +38,64 @@ nav {
 }
 
 .logo img {
-    height: 150px; /* Ajusta el tamaño del logo según tus necesidades */
-    width: auto; /* Para que el ancho se adapte al tamaño del logo */
+    height: 150px;
+    width: auto;
+    padding: 20px;
 }
 
-.producDesplegable {
-    position: absolute;
-    display: none;
-    list-style: none;
+.buscador input {
+    width: 300px;
+    padding: 10px;
+    algin-items: center;
+}
+
+/* MENU BARRA */
+
+.header_menu {
     width: 100%;
+    height: 50px;
+    background-color: #390368;
+    padding: 0 20px;
+}
+
+.menu {
+    width: 1200px;
+    margin: auto;
+    height: 100%;
+
+}
+
+.menu a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-sizing: 14px;
+    transition: all 0.3s;
+}
+
+.menu a:hover{
     background: rgb(143,146,90);
     background: linear-gradient(90deg, rgba(143,146,90,0.7372198879551821) 5%, rgba(72,127,47,0.7400210084033614) 95%);
-    top: 100%;
-    left: 0;
-    padding: 0;
-    margin: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
 
 }
 
-.productoT:hover .producDesplegable {
-    display: block;
+nav {
+    height: 100%;
 }
 
-.producDesplegable li {
-    padding: 5px;
+nav ul{
+    height: 100%;
+    display: flex;
 }
 
-.producDesplegable li a {
-    font-size: 22px;
-    color: black;
-    text-decoration: none;
-}
-
-.producDesplegable li a:hover {
-    background: rgb(34,36,2);
-    background: linear-gradient(90deg, rgba(34,36,2,0.7372198879551821) 5%, rgba(60,75,113,0.7400210084033614) 95%);
+nav ul li{
+    height: 100%;
+    list-style: none;
+    position: relative;
 }

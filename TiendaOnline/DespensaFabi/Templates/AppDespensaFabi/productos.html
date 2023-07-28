@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Despensa Fabi</title>
+    <link rel="stylesheet" href="{% static 'AppDespensaFabi/css/DesFabiStyles.css' %}">
+</head>
+<body>
+    <nav>
+        <!-- Tu código del navbar aquí... -->
+    </nav>
+
+    <div class="container">
+        <h1>Productos</h1>
+        {% if categoria %}
+        <h2>Categoría: {{ categoria|capfirst }}</h2>
+        {% endif %}
+
+        <div class="productos">
+            {% if productos %}
+                {% for producto in productos %}
+                    <div class="producto">
+                        <h3>{{ producto.nombre }}</h3>
+                        <p>Código: {{ producto.codigo }}</p>
+                        <p>Descripción: {{ producto.descripcion }}</p>
+                        <p>Precio: ${{ producto.precio }}</p>
+                        <p>Stock: {{ producto.stock }}</p>
+                        <!-- Agrega aquí más detalles del producto si los deseas -->
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No se encontraron productos para esta categoría.</p>
+            {% endif %}
+        </div>
+    </div>
+
+</body>
+</html>

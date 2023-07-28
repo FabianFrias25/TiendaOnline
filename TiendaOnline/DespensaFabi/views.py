@@ -12,8 +12,20 @@ def Home(request):
     return render(request, "AppDespensaFabi/home.html")
 
 
-def Producto(request):
-    return render(request, "AppDespensaFabi/producto.html")
+def Productos(request):
+    categorias = ['comestibles', 'enlatados', 'desayuno', 'limpieza', 'bebidas', 'otros']
+    productos = Producto.objects.all()
+
+    categoria_seleccionada = request.GET.get('categoria')
+    if categoria_seleccionada:
+        productos = productos.filter(categoria=categoria_seleccionada)
+
+    context = {
+        'productos': productos,
+        'categorias': categorias,
+    }
+
+    return render(request, "AppDespensaFabi/productos.html", context)
 
 
 def Carrito (request):

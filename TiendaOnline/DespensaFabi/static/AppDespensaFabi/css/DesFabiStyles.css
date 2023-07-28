@@ -2,3 +2,76 @@
     margin-top: 100px !important;
     padding: 20;
 }
+
+nav {
+    background-color: #91D17F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    padding: 5px 10%;
+}
+
+.nav-option {
+    font-family: "Calisto MT", sans-serif;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 5px 5px 5px 10px;
+}
+
+.nav-option li {
+    display: inline-block;
+    padding: 0 20px;
+    position: relative;
+}
+
+.nav-option a {
+    font-size: 25px;
+    font-weight: 700;
+    color: #EAEAEA;
+    text-decoration: none;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.logo img {
+    height: 150px; /* Ajusta el tamaño del logo según tus necesidades */
+    width: auto; /* Para que el ancho se adapte al tamaño del logo */
+}
+
+.producDesplegable {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 100%;
+    background: rgb(143,146,90);
+    background: linear-gradient(90deg, rgba(143,146,90,0.7372198879551821) 5%, rgba(72,127,47,0.7400210084033614) 95%);
+    top: 100%;
+    left: 0;
+    padding: 0;
+    margin: 0;
+
+}
+
+.productoT:hover .producDesplegable {
+    display: block;
+}
+
+.producDesplegable li {
+    padding: 5px;
+}
+
+.producDesplegable li a {
+    font-size: 22px;
+    color: black;
+    text-decoration: none;
+}
+
+.producDesplegable li a:hover {
+    background: rgb(34,36,2);
+    background: linear-gradient(90deg, rgba(34,36,2,0.7372198879551821) 5%, rgba(60,75,113,0.7400210084033614) 95%);
+}

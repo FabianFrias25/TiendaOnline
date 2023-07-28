@@ -1,13 +1,40 @@
 <!doctype html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Despensa Fabi | Home</title>
+    <link href="{% static 'AppDespensaFabi/css/DesFabiStyles.css' %}" rel="stylesheet">
+    <link href="{% static 'AppDespensaFabi/css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static 'AppDespensaFabi/js/bootstrap.min.js' %}"></script>
+    <title>{% block title %}Despensa Fabi | Home{% endblock %}</title>
 </head>
-<body>
-<p>a</p>
+<body style="background-color: #4A972B;">
+    <nav>
+        <div class="logo">
+            <img src="{% static 'AppDespensaFabi/assets/img/logo.png' %}" alt="Logo de Despensa Fabi">
+        </div>
+        <div>
+            <ul class="nav-option">
+                <li><a href="{% url 'Home' %}">HOME</a></li>
+                <li class="productoT">
+                    <a href="#">Productos</a>
+                    <ul class="producDesplegable">
+                        <li><a href="#">Comestibles</a></li>
+                        <li><a href="#">Enlatados</a></li>
+                        <li><a href="#">Desayuno</a></li>
+                        <li><a href="#">Limpieza</a></li>
+                        <li><a href="#">Bebidas</a></li>
+                        <li><a href="#">Otros</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Perfil</a></li>
+            </ul>
+        </div>
+    </nav>
 </body>
 </html>

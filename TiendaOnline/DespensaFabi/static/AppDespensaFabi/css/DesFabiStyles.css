@@ -38,7 +38,7 @@ header{
 }
 
 .logo img {
-    height: 150px;
+    height: 120px;
     width: auto;
     padding: 20px;
 }
@@ -62,7 +62,6 @@ header{
     width: 1200px;
     margin: auto;
     height: 100%;
-
 }
 
 .menu a{
@@ -83,7 +82,6 @@ header{
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
-}
 
 nav {
     height: 100%;
@@ -98,4 +96,33 @@ nav ul li{
     height: 100%;
     list-style: none;
     position: relative;
+}
+
+/* SUBMENU */
+
+nav ul li ul {
+    width: auto !important;
+    height: auto; !important;
+    display: flex;
+    flex-direction: column;
+    background: rgb(143, 146, 90);
+    background: linear-gradient(90deg, rgba(143, 146, 90, 0.7372198879551821) 5%, rgba(72, 127, 47, 0.7400210084033614) 95%);
+    position: absolute;
+    top: 50px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+nav ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+.producDesplegable li a:hover {
+    background: rgb(34, 36, 2);
+    background: linear-gradient(90deg, rgba(34, 36, 2, 0.7372198879551821) 5%, rgba(60, 75, 113, 0.7400210084033614) 95%);
 }

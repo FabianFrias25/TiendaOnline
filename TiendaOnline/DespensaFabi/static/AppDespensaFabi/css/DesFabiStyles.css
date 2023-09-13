@@ -24,7 +24,7 @@ header{
 /* HEADER SUPERIOR */
 
 .header_superior{
-    max-width: 1200px
+    max-width: 1200px;
     margin: auto;
     display: flex;
     align-items: center;
